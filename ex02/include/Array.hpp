@@ -1,55 +1,63 @@
 #include <iostream>
-
+	#include <bits/stdc++.h>
 template <typename T>
 class Array
 {
 	private:
-		T *arr;
+		T	*_arr;
+		int	_size;
+
 	public:
-	Array();
+	Array()
+	{
+		_arr = nullptr;
+		_size = 0;
+	}
 	Array(unsigned int n)
 	{
-		arr = new T[n];
+		_arr = new T[n];
+		_size = n;
 	}
+
 	Array(const Array& copy)
 	{
-		for (int i = 0; i < copy.arr.size(); i++)
+		_arr = new T[copy._size];
+		_size = copy._size;
+		for (int i = 0; i < _size; i++)
 		{
-			arr[i] = copy.arr[i];
+			_arr[i] = copy._arr[i];
 		}
 	}
 	Array& operator=(const Array&src)
 	{
 		if (this != &src)
 		{
-			for (int i = 0; i < src.arr.size(); i++)
+			for (int i = 0; i < _size; i++)
 			{
-				arr[i] = new T;
+				_arr[i] = src._arr[i];
 			}
 		}
 		return *this;
 	}
 	T operator[](int index) const //this one returns whatever is there
 	{
-		if (index < 0 || index > size())
+		if (index < 0 || index >= _size)
 		{
 			throw std::exception();
-
 		}
-		return(arr[index]);
+		return(_arr[index]);
 	}
 	T& operator[](int index) //this one modifies the actual par
 	{
-		if (index < 0 || index > size())
+		if (index < 0 || index >= _size)
 		{
 			throw std::exception();
-
 		}
-		return(arr[index]);
+		return(_arr[index]);
 	}
 	int size() const
 	{
-		return arr->size();
+		return _size;
 	}
 
 };

@@ -1,6 +1,6 @@
 NAME = array
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = --std=c++17 -Wall -Wextra -Werror
 SRC_DIR = src/
 OBJ_DIR = obj/
 INC_DIR = include/
