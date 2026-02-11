@@ -24,7 +24,7 @@ template <typename T, typename F>
 
 void	iter(T& arr, const size_t length, F function)
 {
-	for (int i = 0; i < length; i++)
+	for (size_t i = 0; i < length; i++)
 	{
 		function(arr[i]);
 	}
