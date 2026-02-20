@@ -8,8 +8,17 @@ void increasethis(T& y)
 	std::cout << "After: " << y << std::endl;
 }
 
-//you need to define which data type is coming...
+template <typename T>
+void printThis(const T& y)
+{
+	std::cout << "Before: " << y << std::endl;
+	std::cout << "After: " << y << std::endl;
+}
+
 int main( void ) {
-int arr[3] = { 0, 1, 2};
-::iter(arr, 3, increasethis<int>);
+	const int arr[3] = { 0, 1, 2};
+	::iter(arr, 3, printThis<int>);
+	std::cout << "\n\n" << std::endl;
+	int arr1[3] = { 0, 1, 2};
+	::iter(arr1, 3, increasethis<int>);
 }

@@ -20,9 +20,9 @@ int main( void )
 		std::cout << "Copied: " << arr1[0] << arr1[1] << arr1[2] << arr1[3] << std::endl;
 		arr2 = arr;
 		std::cout << "Assigned: " << arr2[0] << arr2[1] << arr2[2] << arr2[3] << std::endl;
-		arr[0] = "testing";
-		arr1[1] = "testing copied";
-		arr2[2] = "testing assigned";
+		arr[0] = " [testing] ";
+		arr1[1] = " [testing copied] ";
+		arr2[2] = " [testing assigned] ";
 		std::cout << "Original: " << arr[0] << arr[1] << arr[2] << arr[3] << std::endl; 
 		std::cout << "Copied: " << arr1[0] << arr1[1] << arr1[2] << arr1[3] << std::endl;
 		std::cout << "Assigned: " << arr2[0] << arr2[1] << arr2[2] << arr2[3] << std::endl;

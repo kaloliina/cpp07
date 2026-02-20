@@ -1,5 +1,5 @@
 #include <iostream>
-	#include <bits/stdc++.h>
+
 template <typename T>
 class Array
 {
@@ -18,7 +18,6 @@ class Array
 		_arr = new T[n];
 		_size = n;
 	}
-
 	Array(const Array& copy)
 	{
 		_arr = new T[copy._size];
@@ -59,5 +58,4 @@ class Array
 	{
 		return _size;
 	}
-
 };
